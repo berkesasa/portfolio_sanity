@@ -12,7 +12,7 @@ async function HomeProjects() {
                 <h2>Projects</h2>
             </div>
             <div className='max-lg:mt-7 lg:mt-14'>
-                <div className='grid xl:grid-cols-2 max-xl:gap-10 xl:gap-20 !h-auto items-center'>
+                <div className='flex !h-auto items-center'>
                     <HomeSwiper github={githubProjects} website={websiteProjects} />
                 </div>
 

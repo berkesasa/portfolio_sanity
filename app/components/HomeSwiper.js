@@ -14,10 +14,10 @@ function HomeSwiper({ github, website }) {
             <Swiper
                 className="githubProjects !px-10"
                 direction={'vertical'}
-                autoplay={{
-                    delay: 4000,
-                    disableOnInteraction: false,
-                }}
+                // autoplay={{
+                //     delay: 4000,
+                //     disableOnInteraction: false,
+                // }}
                 autoHeight={true}
                 pagination={{
                     clickable: true,
@@ -26,6 +26,7 @@ function HomeSwiper({ github, website }) {
             >
                 {github?.map((project) => {
                     if (project.homepageVisibility === true) {
+                        const slicedDesc = project.description.slice(0, 10) + "..."
                         return (
                             <SwiperSlide key={project._id}>
                                 <GithubProject
@@ -33,7 +34,7 @@ function HomeSwiper({ github, website }) {
                                     technologies={project.technologies}
                                     url={project.link}
                                     date={project.date}
-                                    description={project.description}
+                                    description={slicedDesc}
                                 />
                             </SwiperSlide>
                         );
