@@ -1,30 +1,9 @@
-import Link from 'next/link'
 import React from 'react'
-import Image from 'next/image'
 import GithubProject from '../components/GithubProjects'
 import WebProject from '../components/WebProject'
 import Transition from '../components/Transition'
 import GithubCalendar from '../components/GithubCalendar'
-import { client } from '../components/lib/sanity'
-
-async function getProjects() {
-  const query = `*[_type=="projects"] {
-    title,
-    description,
-    technologies,
-    date,
-    link,
-    type,
-    image,
-      _id,
-      "imageUrl": image.asset->url
-  }`;
-
-  const data = await client.fetch(query);
-  const githubProjects = data.filter((project) => project.type === 'GitHub');
-  const websiteProjects = data.filter((project) => project.type === 'Website');
-  return { githubProjects, websiteProjects }
-}
+import getProjects from '../components/sanityGetFuncs/getProjects'
 
 async function Project() {
 
@@ -48,7 +27,6 @@ async function Project() {
             <h3>Github</h3>
             <div className='max-lg:mt-7 lg:mt-14 grid lg:grid-cols-2 max-lg:gap-10 lg:gap-20'>
               {githubProjects?.map((project) => (
-
                 <GithubProject
                   key={project._id}
                   name={project.title}
@@ -58,7 +36,6 @@ async function Project() {
                   description={project.description}
                 />
               ))}
-
             </div>
           </div>
 
@@ -66,12 +43,6 @@ async function Project() {
           <div className='max-lg:mt-7 lg:mt-14'>
             <h3>Website</h3>
             <div className='grid sm:grid-cols-2 max-sm:gap-5 gap-10 lg:gap-20 max-lg:mt-7 lg:mt-14'>
-
-              {/* <WebProject
-                name="Lorem ipsum dolor sit amet."
-                imageSrc="/projectipsum.jpeg"
-                url="lipsum.com"
-              /> */}
               {websiteProjects?.map((project) => (
                 <WebProject
                   key={project._id}
@@ -81,9 +52,7 @@ async function Project() {
                 />
               ))}
             </div>
-
           </div>
-
         </div>
       </section>
     </Transition>

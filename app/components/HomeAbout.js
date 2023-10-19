@@ -1,20 +1,10 @@
-"use client"
 import Link from "next/link"
 import Image from "next/image"
 import Me from "@/public/me.png"
 import Technology from "./Technology"
-import { Cursor, useTypewriter } from 'react-simple-typewriter'
+import TypeWriter from "./TypeWriter"
 
 function HomeAbout() {
-
-    const [text, count] = useTypewriter({
-        words: ["<Frontend Developer/>",
-            "<Next.js Learner/>",
-            "<Typescript Learner/>",
-            "<Lego Lover/>"],
-        loop: true,
-        delaySpeed: 1000,
-    });
 
     return (
         <div className='container'>
@@ -31,8 +21,7 @@ function HomeAbout() {
                         />
                         <div className=' text-center'>Hi! I&apos;m Berke SASA!</div>
                         <div className=' text-center dark:text-white flex justify-center items-center  xl:max-2xl:text-xl 2xl:text-3xl'>
-                            <span>{text}</span>
-                            <Cursor cursorColor='#16B09F' />
+                            <TypeWriter />
                         </div>
                     </div>
                     <div className='basis-2/3'>

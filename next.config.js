@@ -3,6 +3,9 @@
  */
 const nextConfig = {
     distDir: 'build',
+    images: {
+        domains: ['cdn.sanity.io'],
+    },
     // exportPathMap: function () {
     //     return {
     //         '/': { page: '/welcome' }, // Başlangıç sayfanızı varsayılan olarak ayarlayın

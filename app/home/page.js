@@ -2,7 +2,7 @@ import Computers from '../components/models/Computers'
 import HomeAbout from '../components/HomeAbout'
 import HomeProjects from '../components/HomeProjects'
 import HomeContact from '../components/HomeContact'
-import Transition from '../components/Transition'
+
 
 export default async function Home() {
 
