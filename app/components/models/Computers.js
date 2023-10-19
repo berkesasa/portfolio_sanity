@@ -3,13 +3,13 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { useGLTF, MeshReflectorMaterial, BakeShadows, Environment } from '@react-three/drei'
 import { EffectComposer, Bloom, DepthOfField } from '@react-three/postprocessing'
 import { easing } from 'maath'
-import { Instances} from './Model'
-import Model from './Model'
+import { Instances} from './ComputersModel'
+import ComputersModel from './ComputersModel'
 
 export default function Computers() {
     return (
 
-        <div className='h-screen w-full relative top-0 left-0'>
+        <div className='max-lg:h-[50vh] lg:h-screen w-full relative top-0 left-0 max-lg:mt-16'>
             <Canvas shadows dpr={[1, 1.5]} camera={{ position: [0, 10, 10], fov: 55, near: 1, far: 20 }} eventPrefix="client">
                 <Environment preset='city' />
                 {/* Lights */}
@@ -20,7 +20,7 @@ export default function Computers() {
                 <group position={[-0, -1, 0]}>
                     {/* Auto-instanced sketchfab model */}
                     <Instances>
-                        <Model scale={0.5} />
+                        <ComputersModel scale={0.5} />
                     </Instances>
                     {/* Plane reflections + distance blur */}
                     <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]}>

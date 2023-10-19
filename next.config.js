@@ -1,8 +1,14 @@
-/** @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
-    reactStrictMode: true,
     distDir: 'build',
-    output: 'export'
+    // exportPathMap: function () {
+    //     return {
+    //         '/': { page: '/welcome' }, // Başlangıç sayfanızı varsayılan olarak ayarlayın
+    //         '/home': { page: '/home' }, // Ana sayfanız
+    //     };
+    // },
 }
 
 module.exports = nextConfig

@@ -9,9 +9,9 @@ module.exports = {
   theme: {
     extend: {
       container: {
-        center:true,
+        center: true,
         padding: {
-          DEFAULT: '1rem',
+          DEFAULT: '1.25rem',
           sm: '2rem',
           lg: '4rem',
           xl: '5rem',
@@ -23,9 +23,21 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        'sasaDark': '#111111',
+        'sasaGreenLM': '#14b8a6',
+        'sasaGreenDM': '#5eead4'
+      },
+      borderRadius: {
+        '4xl': '40px'
+      },
+      boxShadow: {
+        'center': '0px 0px 50px 0px rgba(0,0,0,0.1)',
+        'center-xl': '0px 0px 50px 0px rgba(0,0,0,0.25)',
+      },
     },
   },
   plugins: [
-    require('@tailwindcss/forms'), require('@tailwindcss/typography')
+    require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('tailwind-scrollbar-hide')
   ],
 }

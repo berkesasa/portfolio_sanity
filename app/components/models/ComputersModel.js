@@ -34,7 +34,7 @@ export function Instances({ children, ...props }) {
   )
 }
 
-export default function Model(props) {
+export default function ComputersModel(props) {
   const { nodes: n, materials: m } = useGLTF('/computers.glb')
   const instances = useContext(context)
   return (
@@ -196,7 +196,7 @@ function Leds({ instances }) {
   useMemo(() => {
     nodes.Sphere.material = new THREE.MeshBasicMaterial()
     nodes.Sphere.material.toneMapped = false
-  }, [])
+  }, [nodes.Sphere])
   useFrame((state) => {
     ref.current.children.forEach((instance) => {
       const rand = Math.abs(2 + instance.position.x)
@@ -219,3 +219,5 @@ function Leds({ instances }) {
     </group>
   )
 }
+
+useGLTF.preload('./computers.glb')
