@@ -75,7 +75,7 @@ async function Project() {
                 <WebProject
                   key={project._id}
                   name={project.title}
-                  imageSrc={project.imageUrl}
+                  imageSrc={project.image}
                   url={project.link}
                 />
               ))}
