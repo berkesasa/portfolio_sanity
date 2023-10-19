@@ -29,6 +29,7 @@ async function getProjects() {
 async function Project() {
 
   const { githubProjects, websiteProjects } = await getProjects();
+
   return (
     <Transition>
       <section className="max-lg:mt-24 lg:mt-32">
@@ -75,12 +76,10 @@ async function Project() {
                 <WebProject
                   key={project._id}
                   name={project.title}
-                  imageSrc={project.image}
+                  imageSrc={project.imageUrl}
                   url={project.link}
                 />
               ))}
-
-
             </div>
 
           </div>
