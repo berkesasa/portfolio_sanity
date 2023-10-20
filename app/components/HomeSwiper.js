@@ -26,8 +26,8 @@ function HomeSwiper({ github, website }) {
             modules={[Autoplay, Pagination]}
         >
             {github?.map((project) => {
+                const slicedDesc = project.description.split(' ').slice(0, 10).join(' ') + "..."
                 if (project.homepageVisibility === true) {
-                    const slicedDesc = project.description.split(' ').slice(0, 10).join(' ') + "..."
                     return (
                         <SwiperSlide key={project._id}>
                             <GithubProject
