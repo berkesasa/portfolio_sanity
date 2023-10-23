@@ -9,7 +9,7 @@ import ComputersModel from './ComputersModel'
 export default function Computers() {
     return (
 
-        <div className='max-lg:h-[50vh] lg:h-screen w-full relative top-0 left-0 max-lg:mt-16'>
+        <div className='lg:h-[calc(100vh-66px)] w-full relative top-0 left-0 max-lg:mt-16'>
             <Canvas shadows dpr={[1, 1.5]} camera={{ position: [0, 10, 10], fov: 55, near: 1, far: 20 }} eventPrefix="client">
                 <Environment preset='city' />
                 {/* Lights */}

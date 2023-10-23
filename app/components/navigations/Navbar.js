@@ -16,11 +16,11 @@ function Navbar() {
     let pathname = usePathname() || ''
 
     return (
-        <Disclosure as="nav">
+        <Disclosure as="nav" className="sticky top-0 !z-50" >
             {({ open }) => (
                 <>
                     <div
-                        className={`${pathname === '/' ? 'hidden' : ''} transition-all duration-300 top-0 left-0 w-full z-50 right-0 top bg-white dark:bg-sasaDark border-b-2 border-black dark:border-white fixed`}>
+                        className={`${pathname === '/' ? 'hidden' : ''} transition-all duration-300 top-0 left-0 w-full z-50 right-0 top bg-white dark:bg-sasaDark border-b-2 border-black dark:border-white`}>
                         <div className="container">
                             <div className="flex justify-between h-16">
                                 <div className="flex justify-between w-full">
@@ -112,8 +112,8 @@ function Navbar() {
                         leaveTo="transform scale-95 opacity-0"
                     >
 
-                        <Disclosure.Panel static className="sm:hidden mt-[70px]">
-                            <div className={`pb-2 space-y-1`}>
+                        <Disclosure.Panel static className="sm:hidden bg-white dark:bg-sasaDark">
+                            <div className={`py-1 space-y-1`}>
                                 <Link
                                     href="/home"
                                     prefetch

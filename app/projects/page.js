@@ -5,13 +5,15 @@ import Transition from '../components/Transition'
 import GithubCalendar from '../components/GithubCalendar'
 import getProjects from '../components/sanityGetFuncs/getProjects'
 
+export const revalidate = 60
+
 async function Project() {
 
   const { githubProjects, websiteProjects } = await getProjects();
 
   return (
     <Transition>
-      <section className="max-lg:mt-24 lg:mt-32">
+      <section className="max-lg:mt-10 lg:mt-20">
 
         <div className='container'>
           <div>

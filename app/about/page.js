@@ -7,6 +7,7 @@ import Transition from "../components/Transition"
 import getExperience from "../components/sanityGetFuncs/getExperience"
 
 
+export const revalidate = 60
 async function About() {
 
     const experience = await getExperience();
@@ -15,7 +16,7 @@ async function About() {
 
         <Transition>
 
-            <section className="max-lg:mt-24 lg:mt-32">
+            <section className="max-lg:mt-10 lg:mt-20">
                 <div className='container'>
                     <div>
                         <h2>About</h2>

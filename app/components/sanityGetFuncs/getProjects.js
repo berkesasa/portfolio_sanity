@@ -1,6 +1,5 @@
 import { client } from '../../lib/sanity'
 
-
 export default async function getProjects() {
     const query = `*[_type=="projects"] {
         title,

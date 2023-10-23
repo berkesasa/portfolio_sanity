@@ -3,13 +3,13 @@ import HomeAbout from '../components/HomeAbout'
 import HomeProjects from '../components/HomeProjects'
 import HomeContact from '../components/HomeContact'
 
-
+export const revalidate = 60
 export default async function Home() {
 
     return (
         <div>
                 {/* Computers */}
-                <section id='computers' className='max-lg:hidden lg:block'>
+                <section id='computers' className='max-lg:hidden  lg:block'>
                     <Computers />
                 </section>
 

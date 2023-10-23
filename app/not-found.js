@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function NotFound() {
     return (
-        <div className='flex flex-col items-center justify-center max-lg:mt-24 lg:mt-32 container'>
+        <div className='flex flex-col items-center justify-center max-lg:mt-10 lg:mt-20 container'>
             <h2>404 Not Found</h2>
             <p className='max-lg:mt-3 lg:mt-7 text-center'>Dude, we gotta get out of here, let&apos;s go to the homepage.</p>
 

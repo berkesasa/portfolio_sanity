@@ -1,8 +1,14 @@
 "use client"
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
+import { usePathname } from "next/navigation"
 
-const Transition = ({ children }) => (
-  <motion.div
+import React from 'react'
+
+export default function Transition({children}) {
+  let pathname = usePathname();
+
+  return (
+    <motion.div
     initial={{ translateY: -100, opacity: 0 }}
     animate={{ translateY: 0, opacity: 1 }}
     exit={{ translateY: 100, opacity: 0 }}
@@ -14,5 +20,5 @@ const Transition = ({ children }) => (
   >
     {children}
   </motion.div>
-);
-export default Transition;
+  )
+}
