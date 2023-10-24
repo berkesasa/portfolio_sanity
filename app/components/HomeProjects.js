@@ -15,8 +15,6 @@ async function HomeProjects() {
                 <div className='max-xl:flex max-xl:flex-col max-xl:spcae-y-10 xl:grid xl:grid-cols-2 xl:gap-10 !h-auto items-center'>
                     <HomeSwiper github={githubProjects} website={websiteProjects} />
                 </div>
-
-
             </div>
         </div>
     )
