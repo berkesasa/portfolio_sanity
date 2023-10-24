@@ -1,6 +1,12 @@
 import React from 'react'
 
 function Experience({title, jobTitle, description, startDate, endDate}) {
+
+    var newStartDate = startDate.split('-')
+    newStartDate = `${newStartDate[2]}/${newStartDate[1]}/${newStartDate[0]}`
+    var newEndDate = startDate.split('-')
+    newEndDate = `${newEndDate[2]}/${newEndDate[1]}/${newEndDate[0]}`
+
     return (
         <div className="rounded-4xl border-2 border-sasaGreenLM shadow-lg shadow-teal-200 p-7 h-full flex flex-col justify-start">
             <div>
@@ -22,7 +28,7 @@ function Experience({title, jobTitle, description, startDate, endDate}) {
                     <h4>{title}</h4>
                     <span className="text-gray-700 dark:text-gray-100">{jobTitle}</span>
                 </div>
-                <div>{startDate}-{endDate}</div>
+                <div>{newStartDate}-{newEndDate}</div>
             </div>
             <p className="max-lg:mt-3 lg:mt-5 max-sm:text-sm">{description}</p>
         </div>

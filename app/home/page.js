@@ -9,12 +9,12 @@ export default async function Home() {
     return (
         <div>
                 {/* Computers */}
-                <section id='computers' className='max-lg:hidden  lg:block'>
+                <section id='computers' className='max-lg:hidden lg:block'>
                     <Computers />
                 </section>
 
                 {/* About */}
-                <section className='mt-24'>
+                <section className='max-lg:mt-10 lg:mt-24'>
                     <HomeAbout />
                 </section>
 

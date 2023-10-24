@@ -461,6 +461,7 @@ async function About() {
                         <h3>Experience</h3>
                         <div className="max-lg:mt-7 lg:mt-14 grid lg:grid-cols-2 max-lg:gap-10 lg:gap-20">
                             {experience?.map((experience) => (
+                                
                                 <Experience
                                     key={experience._id}
                                     title={experience.title}
