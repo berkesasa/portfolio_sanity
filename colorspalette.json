@@ -1,0 +1,202 @@
+[
+    {
+        "name": "Palette 1",
+        "colors": [
+            "#E63946",
+            "#F1FAEE",
+            "#A8DADC",
+            "#457B9D",
+            "#1D3557"
+        ]
+    },
+    {
+        "name": "Palette 2",
+        "colors": [
+            "#F4A261",
+            "#EE964B",
+            "#FDE3A7",
+            "#F9C74F",
+            "#F76D57"
+        ]
+    },
+    {
+        "name": "Palette 3",
+        "colors": [
+            "#2A9D8F",
+            "#F4A261",
+            "#E9C46A",
+            "#E76F51",
+            "#264653"
+        ]
+    },
+    {
+        "name": "Palette 4",
+        "colors": [
+            "#6A0572",
+            "#AB83A1",
+            "#E4D6A7",
+            "#E9D985",
+            "#2E86AB"
+        ]
+    },
+    {
+        "name": "Palette 5",
+        "colors": [
+            "#F1E4E8",
+            "#E9F1DF",
+            "#FCE38A",
+            "#E2B66A",
+            "#F18D9E"
+        ]
+    },
+    {
+        "name": "Palette 6",
+        "colors": [
+            "#4E8098",
+            "#F5BB00",
+            "#8E3B46",
+            "#A2A392",
+            "#F8F4E3"
+        ]
+    },
+    {
+        "name": "Palette 7",
+        "colors": [
+            "#FF6B6B",
+            "#F9A8A8",
+            "#F3D6D6",
+            "#64B6AC",
+            "#C0E2E0"
+        ]
+    },
+    {
+        "name": "Palette 8",
+        "colors": [
+            "#FF6663",
+            "#FFBF51",
+            "#E5D352",
+            "#48B13E",
+            "#2E348E"
+        ]
+    },
+    {
+        "name": "Palette 9",
+        "colors": [
+            "#F8E9A1",
+            "#F76C6C",
+            "#A8DADC",
+            "#457B9D",
+            "#1D3557"
+        ]
+    },
+    {
+        "name": "Palette 10",
+        "colors": [
+            "#F1FAEE",
+            "#F4A261",
+            "#E9C46A",
+            "#E76F51",
+            "#264653"
+        ]
+    },
+    {
+        "name": "Palette 11",
+        "colors": [
+            "#E63946",
+            "#EE964B",
+            "#FDE3A7",
+            "#F9C74F",
+            "#F76D57"
+        ]
+    },
+    {
+        "name": "Palette 12",
+        "colors": [
+            "#2A9D8F",
+            "#F4A261",
+            "#E9C46A",
+            "#E76F51",
+            "#264653"
+        ]
+    },
+    {
+        "name": "Palette 13",
+        "colors": [
+            "#6A0572",
+            "#AB83A1",
+            "#E4D6A7",
+            "#E9D985",
+            "#2E86AB"
+        ]
+    },
+    {
+        "name": "Palette 14",
+        "colors": [
+            "#F1E4E8",
+            "#E9F1DF",
+            "#FCE38A",
+            "#E2B66A",
+            "#F18D9E"
+        ]
+    },
+    {
+        "name": "Palette 15",
+        "colors": [
+            "#4E8098",
+            "#F5BB00",
+            "#8E3B46",
+            "#A2A392",
+            "#F8F4E3"
+        ]
+    },
+    {
+        "name": "Palette 16",
+        "colors": [
+            "#FF6B6B",
+            "#F9A8A8",
+            "#F3D6D6",
+            "#64B6AC",
+            "#C0E2E0"
+        ]
+    },
+    {
+        "name": "Palette 17",
+        "colors": [
+            "#FF6663",
+            "#FFBF51",
+            "#E5D352",
+            "#48B13E",
+            "#2E348E"
+        ]
+    },
+    {
+        "name": "Palette 18",
+        "colors": [
+            "#F8E9A1",
+            "#F76C6C",
+            "#A8DADC",
+            "#457B9D",
+            "#1D3557"
+        ]
+    },
+    {
+        "name": "Palette 19",
+        "colors": [
+            "#F1FAEE",
+            "#F4A261",
+            "#E9C46A",
+            "#E76F51",
+            "#264653"
+        ]
+    },
+    {
+        "name": "Palette 20",
+        "colors": [
+            "#E63946",
+            "#EE964B",
+            "#FDE3A7",
+            "#F9C74F",
+            "#F76D57"
+        ]
+    }
+]
