@@ -393,15 +393,16 @@
 .githubProjects {
     height: auto !important;
 }
+
 .websiteProjects {
     height: auto !important;
 }
 
-.homeProjectsContainer{
+.homeProjectsContainer {
     height: auto !important;
 }
 
-.swiper-pagination-horizontal{
+.swiper-pagination-horizontal {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -443,7 +444,7 @@
     background: white !important;
 }
 
-.swiper-pagination-vertical{
+.swiper-pagination-vertical {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -538,3 +539,4 @@
         transform: translateX(10px);
     }
 }
+

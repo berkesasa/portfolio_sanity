@@ -4,6 +4,8 @@ import { useState, useEffect, Fragment } from "react";
 import HarfList from "./HarfList";
 import { Dialog, Transition } from '@headlessui/react'
 import Info from "./Info";
+import Duck from '../../../public/duck-pixel.gif'
+import Image from "next/image";
 
 export default function Kart({ data, palette }) {
     const [randomDataIndex, setRandomDataIndex] = useState(0);
@@ -93,8 +95,6 @@ export default function Kart({ data, palette }) {
     function openList() {
         setKnownWordsList(true)
     }
-
-
 
     return (
         <div className="flex justify-center items-start space-x-8">
@@ -221,6 +221,13 @@ export default function Kart({ data, palette }) {
                 </button>
             </div>
 
+            {/* <div className="absolute left-0 w-20 h-20 moving-duck">
+                <Image
+                    id="moving-duck"
+                    src={Duck}
+                    alt="Duck Pixel"
+                />
+            </div> */}
         </div>
     );
 }
