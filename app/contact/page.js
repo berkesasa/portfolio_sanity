@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import Phone from '../components/models/Phone'
 import ContactForm from '../components/ContactForm'
-import Transition from '../components/Transition'
-import DenemeForm from '../components/DenemeForm'
 
 function Contact() {
     return (
@@ -150,7 +148,7 @@ function Contact() {
                             <h3>Hey!</h3>
                             <p className='max-lg:mt-3 lg:mt-5 max-md:text-sm'>I have something very important to discuss with you. The information is top secret, and it&apos;s this;</p>
                         </div>
-                        <DenemeForm />
+                        <ContactForm />
                     </div>
                 </div>
             </div>
