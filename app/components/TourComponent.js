@@ -1,6 +1,11 @@
 import React from 'react';
-import Tour from 'reactour'
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
+
+const Tour = dynamic(
+    () => import('reactour'),
+    { ssr: false },
+);
 
 
 function TourComponent({ isOpen, onRequestClose }) {
