@@ -101,7 +101,7 @@ export default function Kart({ data, palette }) {
     return (
         <div className="max-lg:flex-col flex justify-center w-full ">
 
-            <div className="flex justify-center items-start space-x-8">
+            <div className="flex justify-center items-start max-sm:space-x-3 sm:space-x-8">
                 {/* Kontrol Et */}
                 <div className="flex flex-col justify-center mt-[136px] step-3">
                     <button
@@ -136,14 +136,14 @@ export default function Kart({ data, palette }) {
                     {/* Kart */}
                     <div
                         style={{ backgroundColor: `${palette[randomColorIndex].colors[paletteIndex]}` }}
-                        className={`hover:scale-105 transition-all duration-300 active:scale-90 max-w-md mx-auto p-7 flex flex-col shadow-lg rounded-2xl select-none step-1  !text-black ${result}`}
+                        className={`hover:scale-105 transition-all duration-300 active:scale-90 max-w-md mx-auto p-7 flex flex-col shadow-lg rounded-2xl select-none step-1  !text-black ${result} max-sm:text-sm`}
                     // Üzerine gelince büyütme animasyonu
                     >
                         <div className='flex justify-between'>
                             <div>{data[randomDataIndex].no}</div>
                             <div>{data[randomDataIndex].level}</div>
                         </div>
-                        <div className='flex items-center justify-center h-52 w-52 !font-bold'>
+                        <div className='flex items-center justify-center max-sm:h-32 max-sm:w-32 sm:h-52 sm:w-52 !font-bold'>
                             {data[randomDataIndex].word}
                         </div>
                         <div className='flex justify-center'>
@@ -164,7 +164,7 @@ export default function Kart({ data, palette }) {
                     </div>
                     <HarfList text={hint} />
 
-                    <div className="flex items-center justify-center -top-5 -left-[72px] absolute active:scale-90 transition-all duration-300 step-5">
+                    <div className="flex items-center justify-center -top-5 max-sm:-left-[52px] sm:-left-[72px] absolute active:scale-90 transition-all duration-300 step-5">
                         <button onClick={handleHint} className="bg-[#64CCC5] rounded-full text-white w-10 h-10 flex items-center justify-center">
                             !
                         </button>
@@ -195,7 +195,7 @@ export default function Kart({ data, palette }) {
             <div className="lg:absolute lg:top-32 lg:right-10 step-7 max-lg:mt-10">
                 <h2 className="lg:max-xl:text-base xl:max-2xl:text-xl 2xl:text-2xl text-center mb-5">Bildiğim Kelimeler</h2>
                 <div className="flex max-lg:justify-center lg:justify-end">
-                    <div className="max-w-max max-lg:w-1/2 shadow-center rounded-2xl overflow-hidden">
+                    <div className="max-lg:w-1/2 shadow-center rounded-2xl overflow-hidden">
                         <div
                             onClick={openList}
                             className={`lg:max-xl:w-40 xl:max-2xl:w-52 2xl:w-96 h-52 overflow-y-auto p-7 flex lg:max-2xl:flex-col max-lg:flex-wrap 2xl:flex-wrap lg:max-2xl:space-y-2 bg-white cursor-pointer !text-black`}>
