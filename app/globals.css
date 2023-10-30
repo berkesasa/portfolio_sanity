@@ -540,3 +540,8 @@
     }
 }
 
+
+.dark .reactour__helper--is-open {
+    color: black !important;
+    /* background-color: b  color   lack !important; */
+}
