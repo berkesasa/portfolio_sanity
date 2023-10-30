@@ -77,10 +77,6 @@ export default function Computers() {
                     </div>
                     <div className='hidden peer-hover:block absolute whitespace-nowrap tranform  -translate-x-[calc(100%+10px)] top-1/2 -translate-y-1/2 bg-black text-white p-2 text-sm rounded-lg'>Let&apos;s hide the computers if you want</div>
                 </div>
-                <Link href="/englishpractices" className='block w-10 h-10 relative rounded-full bg-black dark:bg-white text-black mt-5 cursor pointer'>
-                    <div className='flex items-center justify-center text-2xl h-full !font-semibold peer text-white dark:text-black'>?</div>
-                    <div className='hidden peer-hover:block absolute whitespace-nowrap tranform  -translate-x-[calc(100%+10px)] top-1/2 -translate-y-1/2 bg-black text-white p-2 text-sm rounded-lg'>In English, would you like to do some practice?</div>
-                </Link>
             </div>
         </>
 

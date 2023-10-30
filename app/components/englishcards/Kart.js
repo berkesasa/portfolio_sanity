@@ -6,6 +6,8 @@ import { Dialog, Transition } from '@headlessui/react'
 import Info from "./Info";
 import Duck from '../../../public/duck-pixel.gif'
 import Image from "next/image";
+import StartTourButton from '../../components/StartTourButton';
+
 
 export default function Kart({ data, palette }) {
     const [randomDataIndex, setRandomDataIndex] = useState(0);
@@ -97,75 +99,110 @@ export default function Kart({ data, palette }) {
     }
 
     return (
-        <div className="flex justify-center items-start space-x-8">
-            {/* Kontrol Et */}
-            <div className="flex flex-col justify-center mt-[136px]">
-                <button
-                    onClick={handleCheck}
-                    className="bg-[#F97B22] text-white px-4 py-2 rounded-lg  active:scale-90 transition-all duration-300 hover:scale-105"
-                >
-                    Kontrol Et!
-                </button>
-            </div>
+        <div className="max-lg:flex-col flex justify-center w-full ">
 
-            {/* Kart */}
-            <div className="flex flex-col space-y-5 items-center justify-center relative">
-
-                {/* Kart */}
-                <div
-                    style={{ backgroundColor: `${palette[randomColorIndex].colors[paletteIndex]}` }}
-                    className={`hover:scale-105 transition-all duration-300 active:scale-90 max-w-md mx-auto p-7 flex flex-col shadow-lg rounded-2xl select-none  !text-black ${result}`}
-                // Üzerine gelince büyütme animasyonu
-                >
-                    <div className='flex justify-between'>
-                        <div>{data[randomDataIndex].no}</div>
-                        <div>{data[randomDataIndex].level}</div>
-                    </div>
-                    <div className='flex items-center justify-center h-52 w-52 !font-bold'>
-                        {data[randomDataIndex].word}
-                    </div>
-                    <div className='flex justify-center'>
-                        {data[randomDataIndex].subject}
-                    </div>
-                </div>
-
-                {/* Input-Result */}
-                <div className="relative">
-                    <input type="text"
-                        value={userInput}
-                        onChange={(e) => setUserInput(e.target.value)}
-                        onKeyDown={handleKeyDown}
-                        className="shadow-center rounded-xl focus:ring-0 outline-none p-3 mb-2 bg-gray-300 dark:bg-white border-none !text-black"
-                    />
-                    <div
-                        className="absolute top-16 text-green-500 left-1/2 -translate-x-1/2">{result}</div>
-                </div>
-                <HarfList text={hint} />
-
-                <div className="flex items-center justify-center -top-5 -left-[72px] absolute active:scale-90 transition-all duration-300">
-                    <button onClick={handleHint} className="bg-[#64CCC5] rounded-full text-white w-10 h-10 flex items-center justify-center">
-                        !
+            <div className="flex justify-center items-start space-x-8">
+                {/* Kontrol Et */}
+                <div className="flex flex-col justify-center mt-[136px] step-3">
+                    <button
+                        onClick={handleCheck}
+                        className="bg-[#F97B22] text-white sm:w-36 p-3 max-sm:rounded-full sm:py-2 sm:rounded-lg  active:scale-90 transition-all duration-300 hover:scale-105"
+                    >
+                        <div className="max-sm:hidden">Kontrol Et!</div>
+                        <svg
+                            className="w-4 h-4 sm:hidden"
+                            viewBox="0 0 24 24"
+                            data-name="Line Color"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="m5 12 5 5 9-9"
+                                style={{
+                                    fill: "none",
+                                    stroke: "white",
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    strokeWidth: 4,
+                                }}
+                            />
+                        </svg>
                     </button>
                 </div>
-                <Info data={data} randomDataIndex={randomDataIndex} />
-            </div>
 
-            {/* Sıradaki */}
-            <div className="flex flex-col justify-center mt-[136px]">
-                <button onClick={handleNext} className="bg-[#186F65] text-white px-4 py-2 rounded-lg active:scale-90 transition-all duration-300 hover:scale-105">
-                    Sonraki
-                </button>
-            </div>
+                {/* Kart */}
+                <div className="flex flex-col space-y-5 items-center justify-center relative">
 
-            <div className="absolute top-32 right-10">
-                <h2 className="text-2xl text-center">Bildiğim Kelimeler</h2>
-                <div>
+
+                    {/* Kart */}
                     <div
-                        onClick={openList}
-                        className={`mt-5 w-96 h-52 overflow-y-auto p-7 shadow-center rounded-2xl flex flex-wrap bg-white cursor-pointer !text-black`}>
-                        {knownWords.map((word, index) => (
-                            <span className="basis-1/3 h-10 text-sm" key={index}>{word}</span>
-                        ))}
+                        style={{ backgroundColor: `${palette[randomColorIndex].colors[paletteIndex]}` }}
+                        className={`hover:scale-105 transition-all duration-300 active:scale-90 max-w-md mx-auto p-7 flex flex-col shadow-lg rounded-2xl select-none step-1  !text-black ${result}`}
+                    // Üzerine gelince büyütme animasyonu
+                    >
+                        <div className='flex justify-between'>
+                            <div>{data[randomDataIndex].no}</div>
+                            <div>{data[randomDataIndex].level}</div>
+                        </div>
+                        <div className='flex items-center justify-center h-52 w-52 !font-bold'>
+                            {data[randomDataIndex].word}
+                        </div>
+                        <div className='flex justify-center'>
+                            {data[randomDataIndex].subject}
+                        </div>
+                    </div>
+
+                    {/* Input-Result */}
+                    <div className="relative step-2">
+                        <input type="text"
+                            value={userInput}
+                            onChange={(e) => setUserInput(e.target.value)}
+                            onKeyDown={handleKeyDown}
+                            className="shadow-center rounded-xl focus:ring-0 outline-none p-3 mb-2 bg-gray-300 dark:bg-white border-none !text-black"
+                        />
+                        <div
+                            className="absolute top-16 text-green-500 left-1/2 -translate-x-1/2">{result}</div>
+                    </div>
+                    <HarfList text={hint} />
+
+                    <div className="flex items-center justify-center -top-5 -left-[72px] absolute active:scale-90 transition-all duration-300 step-5">
+                        <button onClick={handleHint} className="bg-[#64CCC5] rounded-full text-white w-10 h-10 flex items-center justify-center">
+                            !
+                        </button>
+                    </div>
+                    <Info data={data} randomDataIndex={randomDataIndex} />
+                    <div className="!mt-12"><StartTourButton /></div>
+                </div>
+
+                {/* Sıradaki */}
+                <div className="flex flex-col justify-center mt-[136px] step-4">
+                    <button onClick={handleNext} className="bg-[#186F65] text-white sm:w-36 p-3 sm:py-2 rounded-full sm:rounded-lg active:scale-90 transition-all duration-300 hover:scale-105">
+                        <div className="max-sm:hidden">Sonraki</div>
+                        <svg
+                            className="sm:hidden w-4 h-4 shrink-0 fill-white"
+                            viewBox="0 0 24 24"
+                            data-name="Flat Color"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="m18.6 11.2-12-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .55.89 1 1 0 0 0 1-.09l12-9a1 1 0 0 0 0-1.6Z"
+                            />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            {/* Bildiğim Kelimeler */}
+            <div className="lg:absolute lg:top-32 lg:right-10 step-7 max-lg:mt-10">
+                <h2 className="lg:max-xl:text-base xl:max-2xl:text-xl 2xl:text-2xl text-center mb-5">Bildiğim Kelimeler</h2>
+                <div className="flex max-lg:justify-center lg:justify-end">
+                    <div className="max-w-max max-lg:w-1/2 shadow-center rounded-2xl overflow-hidden">
+                        <div
+                            onClick={openList}
+                            className={`lg:max-xl:w-40 xl:max-2xl:w-52 2xl:w-96 h-52 overflow-y-auto p-7 flex lg:max-2xl:flex-col max-lg:flex-wrap 2xl:flex-wrap lg:max-2xl:space-y-2 bg-white cursor-pointer !text-black`}>
+                            {knownWords.map((word, index) => (
+                                <span className="max-sm:basis-1/2 sm:max-2xl:basis-1/3 2xl:basis-1/3 h-10 text-sm" key={index}>{word}</span>
+                            ))}
+                        </div>
                     </div>
                     <Transition appear show={knownWordsList} as={Fragment}>
                         <Dialog as="div" className="relative z-10" onClose={closeList}>
@@ -196,18 +233,22 @@ export default function Kart({ data, palette }) {
 
                                             <div className="flex flex-wrap">
                                                 {knownWords.map((word, index) => (
-                                                    <span className="basis-1/3 h-10" key={index}>{word}</span>
+                                                    <span className="max-sm:basis-1/2 sm:max-2xl:basis-1/3 2xl:basis-1/3 h-10 text-sm" key={index}>{word}</span>
                                                 ))}
                                             </div>
-                                            <div className="mt-4">
+                                            <div className="flex justify-center items-center flex-col space-y-3 mt-5">
                                                 <button
                                                     type="button"
-                                                    className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                                                    className="inline-flex justify-center rounded-md bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-300 focus-visible:ring-offset-2 transition-all duration-300"
                                                     onClick={closeList}
                                                 >
                                                     Anladım, teşekkürler
                                                 </button>
+                                                <button onClick={handleClear} className="inline-flex justify-center rounded-md bg-red-100 px-4 py-2 text-sm font-medium text-red-900 hover:bg-red-300 focus-visible:ring-offset-2 transition-all duration-300">
+                                                    Listeyi Temizle
+                                                </button>
                                             </div>
+
                                         </Dialog.Panel>
                                     </Transition.Child>
                                 </div>
@@ -215,19 +256,8 @@ export default function Kart({ data, palette }) {
                         </Dialog>
                     </Transition>
                 </div>
-
-                <button onClick={handleClear} className="bg-red-600 text-white px-4 py-2 rounded-lg mt-5 active:scale-90 transition-all duration-300">
-                    Listeyi Temizle
-                </button>
             </div>
 
-            {/* <div className="absolute left-0 w-20 h-20 moving-duck">
-                <Image
-                    id="moving-duck"
-                    src={Duck}
-                    alt="Duck Pixel"
-                />
-            </div> */}
         </div>
     );
 }

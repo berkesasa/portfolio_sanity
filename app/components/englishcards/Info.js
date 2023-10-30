@@ -23,7 +23,7 @@ export default function Info({data, randomDataIndex}) {
 
     return (
         <>
-            <div className="flex items-center justify-center absolute -top-5 -right-[72px] active:scale-90 transition-all duration-300">
+            <div className="flex items-center justify-center absolute -top-5 -right-[72px] active:scale-90 transition-all duration-300 step-6">
                 <button
                     type="button"
                     onClick={openModal}

@@ -3,6 +3,7 @@ import Phone from '../components/models/Phone'
 import ContactForm from '../components/ContactForm'
 
 function Contact() {
+
     return (
         <section className='max-lg:mt-10 lg:mt-20'>
             <div className='container'>
