@@ -80,6 +80,11 @@ export default function Kart({ data, palette }) {
         if (e.key === "Enter") {
             handleCheck();
         }
+        if (e.key === 'Tab') {
+            event.preventDefault();
+            // "Tab" tuşuna basıldığında yapılması gereken işlemleri burada gerçekleştirin
+            handleNext();
+        }
     };
 
     const handleHint = () => {

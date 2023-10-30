@@ -17,7 +17,7 @@ function TourComponent({ isOpen, onRequestClose }) {
         },
         {
             selector: '.step-2',
-            content: 'Cevabını bu alana girebilirsin.',
+            content: 'Cevabını bu alana girebilirsin. "Enter" tuşuna basarak cevabını kontrol edebilir, "Tab" tuşuna basarak bir sonraki kelimeye geçebilirsin.',
         },
         {
             selector: '.step-3',
