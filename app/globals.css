@@ -353,7 +353,7 @@
 }
 
 .sasa-form-submit {
-    @apply rounded-2xl border-sasaGreenLM border shadow-md shadow-teal-200 max-w-max px-8 py-3 dark:hover:bg-sasaGreenDM transition-all duration-300 ease-out hover:bg-sasaGreenLM dark:hover:text-black hover:text-white max-md:text-sm block
+    @apply rounded-2xl border-sasaGreenLM border shadow-md shadow-teal-200 max-w-max px-8 py-3 dark:hover:bg-sasaGreenDM transition-all duration-300 ease-out hover:bg-sasaGreenLM dark:hover:text-black hover:text-white max-md:text-sm flex items-center
 }
 
 #terminal .command {
